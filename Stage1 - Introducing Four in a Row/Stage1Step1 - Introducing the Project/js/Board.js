@@ -6,6 +6,7 @@ class Board {
     }
 
  /** 
+  * CREATOR METHOD
  * Generates 2D array of spaces. 
  * @return  {Array}     An array of space objects
  */
@@ -27,4 +28,17 @@ class Board {
 
         return spaces; 
 
+    }
+
+    /**
+     * RENDER METHOD
+     * Draws associated SVG spaces for all game spaces
+     */
+    drawHTMLBoard(){
+        for (let column of this.spaces){
+            for (let space of column){
+                space.drawSVGSpace();
+            }
+        }
+    }
 }
