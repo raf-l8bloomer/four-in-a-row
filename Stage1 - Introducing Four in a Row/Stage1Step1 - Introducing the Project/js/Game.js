@@ -17,18 +17,26 @@ class Game {
        return players;
     }
 
+/**
+ * Returns active player.
+ * @return (Object) player - The active player.
+ */
+     get activePlayer(){
+        return this.players.find(player => player.active);
+    }
+
 
 /**
- * Gets game ready for play
+ * Initializes game.
  */
 
     startGame(){
+        this.board.drawHTMLBoard();
+        this.activePlayer.activeToken.drawHTMLToken();
+        this.ready = true;
 
 
     }
 
-    get activePlayer(){
-        return this.players.filter(players => players = true);
-    }
 
 }

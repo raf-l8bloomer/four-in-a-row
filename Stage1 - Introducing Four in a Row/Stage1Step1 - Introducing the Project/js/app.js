@@ -1,4 +1,4 @@
-const hame = new Game();
+const game = new Game();
 const beginGame = document.querySelector('#begin-game');
 
 /** 
